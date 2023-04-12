@@ -19,3 +19,7 @@ config:
       variables:
         destination: ($ project $)/pipeline/variables-($ environment $).yml
         path: pipeline/default/variables.sample.yaml
+    terraform:
+      to_delete_rp:
+        destination: ($ project $)/terraform/($ environment $)/to_delete_rp.tf
+        path: terraform/default/to_delete_rp.tf.sample
