@@ -1,4 +1,0 @@
-module "to_delete_rp" {
-  source = "./module-to_delete_rp"
-}
-
