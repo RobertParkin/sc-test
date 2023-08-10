@@ -1,18 +1,14 @@
-# Use the latest version 2 of the Cycloid StackForms engine.
 version: 2
-
-# Define the stack configuration form and organize inputs of various types into sections and groups.
-# See: https://docs.staging.cycloid.io/deploy/stackforms/file-format.html
 use_cases:
 - name: default
   sections:
-  - name: Example section
+  - name: Resource
     groups:
-    - name: Example group
+    - name: application
+      technologies: [terraform]
       vars:
-      - name: "Message"
-        description: "A message echoed during pipeline runs."
-        key: message
+      - name: "Virtual network"
+        description: "Select multiple AWS VPC in which to deploy this environment sub network."
+        key: resource_widget_example
+        widget: cy_inventory_resource
         type: string
-        widget: simple_text
-        default: "hello world"
